@@ -15,7 +15,6 @@ import java.util.List;
 @Builder
 @Data
 public class UserDto {
-    @NotBlank
     private int userId;
 
     @NotBlank
@@ -23,13 +22,15 @@ public class UserDto {
     @NotBlank
     private String password;
     @NotBlank
+    private String repassword;
+    @NotBlank
     private String name;
     @NotBlank
     @Email
     private String email;
 
-    private List<RoleDtlDto> roleDtlDto;
-
     private LocalDateTime createDate;
     private LocalDateTime updateDate;
+
+    private List<RoleDtlDto> roleDtlDto;
 }
